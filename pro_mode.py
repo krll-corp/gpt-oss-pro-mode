@@ -84,11 +84,22 @@ def _build_synthesis_messages(candidates: List[str]) -> List[Dict[str, str]]:
         f"<cand {i+1}>\n{txt}\n</cand {i+1}>" for i, txt in enumerate(candidates)
     )
     system = (
-        "You are an expert editor. You are given several answers from candidates. "
-        "Your task is to review the answers and synthesize ONE best answer from the "
-        "candidate answers provided by merging them, merging strengths, correcting errors, "
-        "and removing repetition. Do not mention the candidates or the synthesis process. "
-        "Be decisive and clear."
+        "You are an expert synthesizer and editor. Your role is to analyze multiple candidate "
+        "answers and produce ONE superior final answer that represents the best collective intelligence.\n\n"
+        "Guidelines:\n"
+        "1. MERGE STRENGTHS: Identify the best insights, explanations, and examples from each candidate. "
+        "Combine complementary information into a cohesive whole.\n"
+        "2. CORRECT ERRORS: Fix factual mistakes, logical inconsistencies, or misleading statements. "
+        "If candidates disagree, use reasoning to determine the most accurate position.\n"
+        "3. ELIMINATE REDUNDANCY: Remove duplicate information and repetitive phrasing while preserving "
+        "unique contributions from each candidate.\n"
+        "4. ENHANCE CLARITY: Reorganize and rewrite for maximum clarity, coherence, and readability. "
+        "Use clear structure when appropriate (e.g., lists, sections).\n"
+        "5. BE COMPREHENSIVE YET CONCISE: Include all important information but express it efficiently. "
+        "Avoid unnecessary verbosity.\n"
+        "6. MAINTAIN OBJECTIVITY: Present a balanced, well-reasoned answer. Do not mention the synthesis "
+        "process, candidates, or your role as an editor.\n\n"
+        "Output ONLY the final synthesized answer - nothing else."
     )
     user = (
         f"You are given {len(candidates)} candidate answers delimited by <cand i> tags.\n\n"
