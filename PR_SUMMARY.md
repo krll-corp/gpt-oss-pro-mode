@@ -5,8 +5,14 @@ This PR updates and reworks the system prompt for the final synthesis agent in t
 
 ## Branch Information
 - **Branch Name**: `copilot/update-rework-system-prompt`
-- **Target**: (to be set by user - typically `main`)
-- **PR Title**: `experiments/copilot-system-prompt`
+- **Target**: `main`
+- **Current PR Title**: `[WIP] Update and rework system prompt for final agent`
+- **Requested PR Title**: `experiments/copilot-system-prompt`
+- **PR Number**: #1
+- **PR Status**: Open (Draft)
+- **PR URL**: https://github.com/krll-corp/gpt-oss-pro-mode/pull/1
+
+**Note**: To match the requested title "experiments/copilot-system-prompt", please update the PR title manually on GitHub.
 
 ## Changes Summary
 
